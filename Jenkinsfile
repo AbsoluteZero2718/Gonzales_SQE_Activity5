@@ -7,8 +7,6 @@ pipeline {
     }
     stage('Run Test') {
       steps {
-         nodejs(nodeJSInstallationName: 'NodeJS-22') {
-        sh 'node -v' // Verification step
         sh 'npm install'
         sh 'npx vitest run'
       }
