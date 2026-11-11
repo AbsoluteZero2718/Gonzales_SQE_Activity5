@@ -20,16 +20,5 @@ pipeline {
         archiveArtifacts artifacts: "react-app-${BUILD_NUMBER}.tar.gz", fingerprint: true
       }
     }
-    stage('Build Docker Image') {
-    agent {
-        docker { 
-            image 'docker:cli' // This image contains the docker command
-            reuseNode true 
-        }
-    }
-    steps {
-        sh 'docker build -t react-app-... deploy'
-    }
-}
   }
 }
