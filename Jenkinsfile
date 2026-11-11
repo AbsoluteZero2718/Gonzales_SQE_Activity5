@@ -8,11 +8,11 @@ pipeline {
     stage('Run Test') {
       steps {
         sh 'npm install'
-        sh 'npm test -- --run'
+        sh 'npx vitest run'
       }
     }
     stage('Build') {
-      steps { sh 'npm run build' }
+      steps { sh 'npx vite build' }
     }
     stage('Archive Artifact') {
       steps {
