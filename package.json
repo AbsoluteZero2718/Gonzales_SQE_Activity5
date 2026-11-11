@@ -1,0 +1,13 @@
+{
+  "name": "react-ci-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}
