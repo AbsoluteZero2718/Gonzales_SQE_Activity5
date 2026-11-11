@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  tools { nodejs 'NodeJS' }
+  tools { nodejs 'NodeJS-22' }
   stages {
     stage('Checkout') {
       steps { checkout scm }
@@ -8,7 +8,7 @@ pipeline {
     stage('Run Test') {
       steps {
         sh 'npm install'
-        sh 'npm test -- --watchAll=false'
+        sh 'npm test -- --run'
       }
     }
     stage('Build') {
