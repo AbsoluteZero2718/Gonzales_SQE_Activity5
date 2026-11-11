@@ -16,8 +16,8 @@ pipeline {
     }
     stage('Archive Artifact') {
       steps {
-        sh "tar -czf react-app-${14}.tar.gz dist Dockerfile"
-        archiveArtifacts artifacts: "react-app-${14}.tar.gz", fingerprint: true
+        sh "tar -czf react-app-${BUILD_NUMBER}.tar.gz dist Dockerfile"
+        archiveArtifacts artifacts: "react-app-${BUILD_NUMBER}.tar.gz", fingerprint: true
       }
     }
   }
